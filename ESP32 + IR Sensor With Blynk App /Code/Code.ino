@@ -29,15 +29,19 @@ void sensor() {
   if (L == 1) {
     Serial.println(" Obstacle detected");
     digitalWrite(ACTION, HIGH);
-    WidgetLED LED(V1);
-    LED.on();
+    WidgetLED LED(V0);
+    LED.off();
+    WidgetLED LED1(V1);
+    LED1.on();
 
   } else {
 
     Serial.println("  === All clear");
     digitalWrite(ACTION, LOW);
-    WidgetLED LED(V1);
-    LED.off();
+    WidgetLED LED(V0);
+    LED.on();
+    WidgetLED LED1(V1);
+    LED1.off();
   }
 }
 
